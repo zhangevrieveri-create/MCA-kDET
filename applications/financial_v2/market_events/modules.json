@@ -1,0 +1,360 @@
+[
+  {
+    "event": "China2015",
+    "module": "银行",
+    "assets": [
+      "600016.XSHG",
+      "600036.XSHG",
+      "601166.XSHG",
+      "600000.XSHG",
+      "601328.XSHG"
+    ],
+    "names": [
+      "民生银行",
+      "招商银行",
+      "兴业银行",
+      "浦发银行",
+      "交通银行"
+    ],
+    "dimension": 5,
+    "returns_file": "China2015_m01_returns.csv",
+    "baseline_fit": [
+      "2010-01-01",
+      "2014-11-28"
+    ],
+    "phase_first": "2015-01-05",
+    "phase_last": "2015-09-30"
+  },
+  {
+    "event": "China2015",
+    "module": "非银行金融",
+    "assets": [
+      "601318.XSHG",
+      "600030.XSHG",
+      "600837.XSHG",
+      "601601.XSHG",
+      "000776.XSHE"
+    ],
+    "names": [
+      "中国平安",
+      "中信证券",
+      "海通证券",
+      "中国太保",
+      "广发证券"
+    ],
+    "dimension": 5,
+    "returns_file": "China2015_m02_returns.csv",
+    "baseline_fit": [
+      "2010-01-01",
+      "2014-11-28"
+    ],
+    "phase_first": "2015-01-05",
+    "phase_last": "2015-09-30"
+  },
+  {
+    "event": "China2015",
+    "module": "房地产",
+    "assets": [
+      "000002.XSHE",
+      "600048.XSHG",
+      "600383.XSHG"
+    ],
+    "names": [
+      "万科A",
+      "保利发展",
+      "金地集团"
+    ],
+    "dimension": 3,
+    "returns_file": "China2015_m03_returns.csv",
+    "baseline_fit": [
+      "2010-01-01",
+      "2014-11-28"
+    ],
+    "phase_first": "2015-01-05",
+    "phase_last": "2015-09-30"
+  },
+  {
+    "event": "China2015",
+    "module": "建筑",
+    "assets": [
+      "601668.XSHG",
+      "601390.XSHG",
+      "601186.XSHG"
+    ],
+    "names": [
+      "中国建筑",
+      "中国中铁",
+      "中国铁建"
+    ],
+    "dimension": 3,
+    "returns_file": "China2015_m04_returns.csv",
+    "baseline_fit": [
+      "2010-01-01",
+      "2014-11-28"
+    ],
+    "phase_first": "2015-01-05",
+    "phase_last": "2015-09-30"
+  },
+  {
+    "event": "China2015",
+    "module": "食品饮料",
+    "assets": [
+      "600887.XSHG",
+      "600519.XSHG"
+    ],
+    "names": [
+      "伊利股份",
+      "贵州茅台"
+    ],
+    "dimension": 2,
+    "returns_file": "China2015_m05_returns.csv",
+    "baseline_fit": [
+      "2010-01-01",
+      "2014-11-28"
+    ],
+    "phase_first": "2015-01-05",
+    "phase_last": "2015-09-30"
+  },
+  {
+    "event": "China2024",
+    "module": "银行",
+    "assets": [
+      "600016.XSHG",
+      "600036.XSHG",
+      "601166.XSHG",
+      "600000.XSHG",
+      "601328.XSHG"
+    ],
+    "names": [
+      "民生银行",
+      "招商银行",
+      "兴业银行",
+      "浦发银行",
+      "交通银行"
+    ],
+    "dimension": 5,
+    "returns_file": "China2024_m01_returns.csv",
+    "baseline_fit": [
+      "2021-01-01",
+      "2023-12-29"
+    ],
+    "phase_first": "2024-03-28",
+    "phase_last": "2024-12-23"
+  },
+  {
+    "event": "China2024",
+    "module": "非银行金融",
+    "assets": [
+      "601318.XSHG",
+      "600030.XSHG",
+      "600837.XSHG",
+      "601601.XSHG",
+      "000776.XSHE"
+    ],
+    "names": [
+      "中国平安",
+      "中信证券",
+      "海通证券",
+      "中国太保",
+      "广发证券"
+    ],
+    "dimension": 5,
+    "returns_file": "China2024_m02_returns.csv",
+    "baseline_fit": [
+      "2021-01-01",
+      "2023-12-29"
+    ],
+    "phase_first": "2024-03-28",
+    "phase_last": "2024-12-23"
+  },
+  {
+    "event": "China2024",
+    "module": "房地产",
+    "assets": [
+      "000002.XSHE",
+      "600048.XSHG",
+      "600383.XSHG"
+    ],
+    "names": [
+      "万科A",
+      "保利发展",
+      "金地集团"
+    ],
+    "dimension": 3,
+    "returns_file": "China2024_m03_returns.csv",
+    "baseline_fit": [
+      "2021-01-01",
+      "2023-12-29"
+    ],
+    "phase_first": "2024-03-28",
+    "phase_last": "2024-12-23"
+  },
+  {
+    "event": "China2024",
+    "module": "建筑",
+    "assets": [
+      "601668.XSHG",
+      "601390.XSHG",
+      "601186.XSHG"
+    ],
+    "names": [
+      "中国建筑",
+      "中国中铁",
+      "中国铁建"
+    ],
+    "dimension": 3,
+    "returns_file": "China2024_m04_returns.csv",
+    "baseline_fit": [
+      "2021-01-01",
+      "2023-12-29"
+    ],
+    "phase_first": "2024-03-28",
+    "phase_last": "2024-12-23"
+  },
+  {
+    "event": "China2024",
+    "module": "食品饮料",
+    "assets": [
+      "600887.XSHG",
+      "600519.XSHG"
+    ],
+    "names": [
+      "伊利股份",
+      "贵州茅台"
+    ],
+    "dimension": 2,
+    "returns_file": "China2024_m05_returns.csv",
+    "baseline_fit": [
+      "2021-01-01",
+      "2023-12-29"
+    ],
+    "phase_first": "2024-03-28",
+    "phase_last": "2024-12-23"
+  },
+  {
+    "event": "US2020",
+    "module": "金融体系",
+    "assets": [
+      "Banks",
+      "Insur",
+      "RlEst",
+      "Fin"
+    ],
+    "names": [
+      "Banks",
+      "Insur",
+      "RlEst",
+      "Fin"
+    ],
+    "dimension": 4,
+    "returns_file": "US2020_m01_returns.csv",
+    "baseline_fit": [
+      "2017-01-01",
+      "2019-06-28"
+    ],
+    "phase_first": "2019-09-30",
+    "phase_last": "2020-06-16"
+  },
+  {
+    "event": "US2020",
+    "module": "科技产业",
+    "assets": [
+      "Hardw",
+      "Softw",
+      "Chips",
+      "LabEq"
+    ],
+    "names": [
+      "Hardw",
+      "Softw",
+      "Chips",
+      "LabEq"
+    ],
+    "dimension": 4,
+    "returns_file": "US2020_m02_returns.csv",
+    "baseline_fit": [
+      "2017-01-01",
+      "2019-06-28"
+    ],
+    "phase_first": "2019-09-30",
+    "phase_last": "2020-06-16"
+  },
+  {
+    "event": "US2020",
+    "module": "防御消费",
+    "assets": [
+      "Food",
+      "Soda",
+      "Beer",
+      "Smoke",
+      "Hshld"
+    ],
+    "names": [
+      "Food",
+      "Soda",
+      "Beer",
+      "Smoke",
+      "Hshld"
+    ],
+    "dimension": 5,
+    "returns_file": "US2020_m03_returns.csv",
+    "baseline_fit": [
+      "2017-01-01",
+      "2019-06-28"
+    ],
+    "phase_first": "2019-09-30",
+    "phase_last": "2020-06-16"
+  },
+  {
+    "event": "US2020",
+    "module": "工业周期",
+    "assets": [
+      "Mach",
+      "ElcEq",
+      "Autos",
+      "Steel",
+      "Trans"
+    ],
+    "names": [
+      "Mach",
+      "ElcEq",
+      "Autos",
+      "Steel",
+      "Trans"
+    ],
+    "dimension": 5,
+    "returns_file": "US2020_m04_returns.csv",
+    "baseline_fit": [
+      "2017-01-01",
+      "2019-06-28"
+    ],
+    "phase_first": "2019-09-30",
+    "phase_last": "2020-06-16"
+  },
+  {
+    "event": "US2020",
+    "module": "能源材料",
+    "assets": [
+      "Oil",
+      "Coal",
+      "Mines",
+      "Gold",
+      "Chems"
+    ],
+    "names": [
+      "Oil",
+      "Coal",
+      "Mines",
+      "Gold",
+      "Chems"
+    ],
+    "dimension": 5,
+    "returns_file": "US2020_m05_returns.csv",
+    "baseline_fit": [
+      "2017-01-01",
+      "2019-06-28"
+    ],
+    "phase_first": "2019-09-30",
+    "phase_last": "2020-06-16"
+  }
+]

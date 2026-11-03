@@ -1,0 +1,14 @@
+{
+  "engine": "Pure Python rdata parser, SciPy ranks/distances/MST, NumPy statistics; no R runtime",
+  "saved_job_files": 15,
+  "recomputed_pvalues": 60,
+  "all_pvalues_recomputed": true,
+  "all_480_pvalues_recomputed": false,
+  "primary_cells": 15,
+  "labelings_per_cell": 5000,
+  "all_four_methods_recomputed_on_all_saved_primary_labelings": true,
+  "max_statistic_error": 1.7053025658242404e-13,
+  "all_primary_pvalues_identical": true,
+  "independently_reconstructed_feature_cells": 0,
+  "R_audit_runtime_note": "The project's R runtime has intermittent decompression/internal errors; this audit uses a pure Python parser and independent numerical libraries."
+}

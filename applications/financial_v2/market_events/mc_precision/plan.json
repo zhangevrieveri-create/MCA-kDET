@@ -1,0 +1,33 @@
+{
+  "B_original": 4999,
+  "B_total": 49999,
+  "B_added": 45000,
+  "jobs": 15,
+  "seed_namespace": 2026102801,
+  "chunk": 500,
+  "bit_generator": "PCG64",
+  "seed_rule": "SeedSequence([2026102801, job_index]); fresh stream for each job",
+  "scope": "All 15 MCA modules; original 4999 permutations retained. Comparators unchanged.",
+  "adjustment": "Holm over the same 15 MCA hypotheses; no window, module, score, filter or learner changes.",
+  "interpretation": "Monte Carlo precision only, not increased statistical power or validated time-series calibration.",
+  "provenance": "Post hoc precision extension declared before new permutations; all results retained.",
+  "sources": {
+    "market_events\\jobs\\event_m01.rds": "ee3ccf45918bb7626f05d7104e5d9d9de22d1ac5264cc33a8bb3114bec8e55b4",
+    "market_events\\jobs\\event_m02.rds": "b88203f579239ecc7c27626af3197283ef423358b9278a397ea2407be4274bc9",
+    "market_events\\jobs\\event_m03.rds": "1344b3eb4428f4f585c653617fb0f5ea533b88f195b3e7f52f74877057829e30",
+    "market_events\\jobs\\event_m04.rds": "f944086a21b8da6b5dd10528935cf2e5429fb4e43c5cbd5f06d99056103a89f3",
+    "market_events\\jobs\\event_m05.rds": "344873ed55fbfbfe768a1fb5f2d95991d0d041553eb2391a020e0538071e269a",
+    "market_events\\jobs\\event_m06.rds": "58425aae79b03a671f2dec82de8d9ff4969661ce60aa4049efa792c49d4c013d",
+    "market_events\\jobs\\event_m07.rds": "450f9746e7ddb0d222baf38eda4d15841e1f6eb966edfa80ad5756865411ea0c",
+    "market_events\\jobs\\event_m08.rds": "0b9473916c206ed0c70181222fafd893398b592d2b2f6061ce58b16f3af3805f",
+    "market_events\\jobs\\event_m09.rds": "46d3136d56dced6f63205c7e511b9be8fcb1bbb902de64bafa558888b80061a8",
+    "market_events\\jobs\\event_m10.rds": "d7cebb217adcd46ec1ba3b95bdccc0a24ffeaf47f6a5f3e5fca490a0b8edab29",
+    "market_events\\jobs\\event_m11.rds": "467939570c5a2c56b73b75af8c99943084e51f7dedee1630e16e8194d002ba4e",
+    "market_events\\jobs\\event_m12.rds": "eadc9d0c2476bfd1b465fa31986697a30500ad8f78e122b3fdd09fbf30b498c8",
+    "market_events\\jobs\\event_m13.rds": "e6f5519b11dbfd77defcb4dd8541cc603ed450feaea96303f0a21975d67910a0",
+    "market_events\\jobs\\event_m14.rds": "e13ce486a439931dd9ae49d04e06770cab68449d9dd3207ddac2c174c805252c",
+    "market_events\\jobs\\event_m15.rds": "2e80798c073c814e2fafb263a5a556ae8147738c107bc4b960a82003cb8c49e6",
+    "market_events\\protocol.json": "daf62b3a3ff1ec681691caffd4dcbec4657e685f85b27dd9d55503fde3503e42",
+    "market_events\\results.csv": "d50b22706fc1c353bc15826c6e774070893286c040839befdeb7be2f0a429dcf"
+  }
+}

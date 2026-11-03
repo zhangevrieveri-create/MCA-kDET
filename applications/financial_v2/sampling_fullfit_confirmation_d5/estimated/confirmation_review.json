@@ -1,0 +1,20 @@
+{
+  "updated_utc": "2026-10-27T16:30:44.344859+00:00",
+  "status": "NUMERICAL_INFLATION_DETECTED",
+  "independent_simulated_panels": 9000,
+  "replications_per_case": 1000,
+  "primary_stride": 4,
+  "B": 999,
+  "source_fingerprints_match": true,
+  "seed_mapping_and_nonoverlap_verified": true,
+  "Holm_recomputed": true,
+  "saved_AUC_audit_cells": 108,
+  "multiplicity_adjusted_inflation_flags": 2,
+  "unadjusted_CI_inflation_flags": 4,
+  "min_test_n": 15,
+  "max_test_n": 26,
+  "learner_warnings_max": 0,
+  "nonconvergence_flags_max": 1,
+  "automatic_real_inference_authorized_by_this_script": false,
+  "caveat": "Finite DGP checks neither establish exchangeability of estimated innovations nor verify informative missingness or market stationarity."
+}

@@ -1,0 +1,48 @@
+{
+  "status": "Exploratory event/state applications proposed after previous stock-comparison analyses; not preregistered confirmatory evidence",
+  "question": "Which fixed risk modules change distribution across historical market stages, and do observed changes accompany greater joint downside exposure?",
+  "observation": "Daily vector of the same fixed asset coordinates within each module, retained across phases; no stock sorting or cross-stock averaging in the test",
+  "primary_representation": "Estimated standardized GARCH residual vector, with a single pre-event fitted filter per coordinate shared by all phases",
+  "raw_returns": "Descriptive downside and market-path analysis only",
+  "China2015": {
+    "phases": [["2015-01-05","2015-03-31"],["2015-04-01","2015-06-12"],["2015-06-15","2015-09-30"]],
+    "labels": ["上涨阶段","高位与见顶阶段","回撤阶段"],
+    "baseline_fit": ["2010-01-01","2014-11-28"],
+    "cohort_date": "2014-12-31",
+    "note": "User selected three historical stages. June 12 is a retrospective market peak, not a real-time trading signal or exogenous treatment. Unequal phase counts are retained."
+  },
+  "China2024": {
+    "anchor": "2024-09-24",
+    "trading_offsets": [[-120,-61],[-60,-1],[0,59]],
+    "labels": ["较早前期","临近政策前","政策发布后"],
+    "baseline_fit": ["2021-01-01","2023-12-29"],
+    "cohort_date": "2014-12-31",
+    "note": "A policy-announcement comparison, not a presumption of a permanent bull/bear transition or causal policy effect. Reuses the historical cohort for transparent scope; not the entire 2024 industry universe."
+  },
+  "US2020": {
+    "anchor": "2020-03-23",
+    "trading_offsets": [[-120,-61],[-60,-1],[0,59]],
+    "labels": ["较早前期","冲击累积期","政策响应后"],
+    "baseline_fit": ["2017-01-01","2019-06-28"],
+    "note": "Independent overseas illustration around the Federal Reserve policy announcement in the pandemic context. Latest-vintage public industry-portfolio returns, not a point-in-time investment backtest."
+  },
+  "China_modules": {"银行":5,"非银行金融":5,"房地产":3,"建筑":3,"食品饮料":2},
+  "China_selection": "Within cached, independently preselected 2014 cohort: descending 2014 CSI300 weight in each historical industry, ties by identifier. No event-period return or survival screen. Missing observations retained on the original calendar; insufficient modules reported, not replaced.",
+  "US_modules": {
+    "金融体系":["Banks","Insur","RlEst","Fin"],
+    "科技产业":["Hardw","Softw","Chips","LabEq"],
+    "防御消费":["Food","Soda","Beer","Smoke","Hshld"],
+    "工业周期":["Mach","ElcEq","Autos","Steel","Trans"],
+    "能源材料":["Oil","Coal","Mines","Gold","Chems"]
+  },
+  "US_source": "Kenneth French 49 Industry Portfolios, daily value-weighted returns; historical SIC membership is maintained by the source",
+  "within_phase_split": "First floor(0.40*N_calendar) dates fit classifiers, next five dates buffer, remaining dates test. Apply complete-coordinate masks after defining the split; do not compress missing dates. Minimum 12 complete vectors in both classifier-fit and test per phase.",
+  "B":4999,
+  "library":["l1","quad","knn","rf"],
+  "comparators":["DISCO","MMD","MST"],
+  "multiplicity":"Holm across the full planned 15 event-module tests separately for each method; nonestimable tests count conservatively as 1 for adjustment but remain missing in reported estimates",
+  "downside_diagnostic":"For each coordinate, baseline-only 5th percentile of raw daily log return. Record the fraction of phase days on which at least half of coordinates fall below those fixed thresholds. This is a descriptive joint-downside statistic, not an independently validated selection outcome.",
+  "no_claims":["non-rejection proves stability","a smaller p-value means greater damage","all pre/post differences are causal","existing calibration failures are solved by changing events"],
+  "paper_edit":false,
+  "no_large_new_simulation":true
+}

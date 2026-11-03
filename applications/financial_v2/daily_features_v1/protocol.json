@@ -1,0 +1,116 @@
+{
+  "status": "Exploratory feasibility trial; dependent-data significance not validated",
+  "author_request": "One stock-day per observation; daily price shape and activity features. No GARCH in main analysis.",
+  "cohort": [
+    {
+      "order_book_id": "600036.XSHG",
+      "symbol": "招商银行",
+      "first_industry_name": "银行"
+    },
+    {
+      "order_book_id": "601166.XSHG",
+      "symbol": "兴业银行",
+      "first_industry_name": "银行"
+    },
+    {
+      "order_book_id": "600016.XSHG",
+      "symbol": "民生银行",
+      "first_industry_name": "银行"
+    },
+    {
+      "order_book_id": "601328.XSHG",
+      "symbol": "交通银行",
+      "first_industry_name": "银行"
+    },
+    {
+      "order_book_id": "600000.XSHG",
+      "symbol": "浦发银行",
+      "first_industry_name": "银行"
+    },
+    {
+      "order_book_id": "600276.XSHG",
+      "symbol": "恒瑞医药",
+      "first_industry_name": "医药"
+    },
+    {
+      "order_book_id": "600518.XSHG",
+      "symbol": "康美药业",
+      "first_industry_name": "医药"
+    },
+    {
+      "order_book_id": "600196.XSHG",
+      "symbol": "复星医药",
+      "first_industry_name": "医药"
+    },
+    {
+      "order_book_id": "000423.XSHE",
+      "symbol": "东阿阿胶",
+      "first_industry_name": "医药"
+    },
+    {
+      "order_book_id": "601607.XSHG",
+      "symbol": "上海医药",
+      "first_industry_name": "医药"
+    },
+    {
+      "order_book_id": "600031.XSHG",
+      "symbol": "三一重工",
+      "first_industry_name": "机械"
+    },
+    {
+      "order_book_id": "300124.XSHE",
+      "symbol": "汇川技术",
+      "first_industry_name": "机械"
+    },
+    {
+      "order_book_id": "300024.XSHE",
+      "symbol": "机器人",
+      "first_industry_name": "机械"
+    },
+    {
+      "order_book_id": "000157.XSHE",
+      "symbol": "中联重科",
+      "first_industry_name": "机械"
+    },
+    {
+      "order_book_id": "000425.XSHE",
+      "symbol": "徐工机械",
+      "first_industry_name": "机械"
+    }
+  ],
+  "selection": "Reuse fixed 2017 historical cohort, not current sector universe; no replacement by observed results.",
+  "fetch_start": "2022-12-15",
+  "fetch_end": "2024-12-31",
+  "fitting": [
+    "2023-01-01",
+    "2023-12-31"
+  ],
+  "testing": "2024; first 20 market trading dates reserved as buffer, all remaining valid daily observations",
+  "features": {
+    "overnight_log_return": "100*log(adjusted open / previous market trading-day adjusted close)",
+    "intraday_log_return": "100*log(adjusted close / adjusted open)",
+    "log_high_low_range": "100*log(adjusted high / adjusted low)",
+    "close_position": "(close-low)/(high-low); 0.5 if high==low on a traded day",
+    "turnover_today": "RQData get_turnover_rate today, vendor units retained, no rolling mean"
+  },
+  "scaling": "Pooled fitting-only scale, shared across stocks. No per-stock or per-period centering/scaling.",
+  "missing": "No price/feature interpolation. Current and previous date must be traded and unsuspended. Keep original calendar.",
+  "hypotheses": "Within each fixed sector: equality of the five stocks daily five-feature marginal distributions.",
+  "diagnostics": "Price-only first four coordinates as prespecified descriptive/learner diagnostic, no independent formal discoveries.",
+  "methods": [
+    "MCA-kDET",
+    "DISCO",
+    "MMD",
+    "MST"
+  ],
+  "B": 999,
+  "interpretation": "Ordinary label permutations are an IID reference diagnostic only, not valid real-market p-values under dependence. Never claim significance or equivalence from this trial.",
+  "frozen_sources": {
+    "R\\models.R": "b9a871e84bd83313aae6dbbcdf1926772008cc186a3f639f8788e76052cebda6",
+    "R\\calib_params.R": "f3fa24311c5e6dfb3360fe0d4c9916ac2054d8dcf83e10bd72f521ac6c1575fa",
+    "R\\calib_params_v2.R": "b4808cdfee51a0a3d730e49282a09eeda12792b1b099c3e7fe7099b9b7383784",
+    "R\\tests.R": "5d50432be5a37a4145dd64af52dfb5e048e9f040ee67a3fd4923499d4f9c7803",
+    "R\\learners.R": "905a63efdc5f3b5d6a99b7509d1511474b5274d359df7f2352ee5dd611227137",
+    "R\\learners_lib.R": "1abed6edff70a2739546b2da2f4ff96b4933bdccaba272ddcc9d2a4cf809f4dc"
+  }
+}

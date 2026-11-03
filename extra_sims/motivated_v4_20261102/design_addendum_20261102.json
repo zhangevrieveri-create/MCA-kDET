@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-02",
+  "authorization": "User: 对的想办法再找一些咱们好的然后把所有方法跑一下",
+  "status": "Exploratory addition after N1-N4 three-repeat smoke. No N1-N4 setting changed. Additional families fixed before their power outcomes.",
+  "purpose": "Probe learnable sparse marginal skewness and low-dimensional radial concentration, retaining all weak/high-dimensional/losing configurations.",
+  "added_families": {
+    "N5_skewmix": "Three independent coordinates X=theta*M+sqrt(1-theta^2)*Z, P(M=2)=0.2, P(M=-0.5)=0.8. E=0, Var=1, third moment=1.5 theta^3.",
+    "N6_ring": "Three independent pairs X_pair=sqrt(2)*theta*(cos(angle),sin(angle))+sqrt(1-theta^2)*Z_pair; angle uniform [0,2pi]. Mean0, CovI. Smooth radial concentration as theta increases; all moments finite."
+  },
+  "grid": "Original four plus two added families; each at d20 target AUC 0.60/0.70/0.80 and d100 target0.70; k3 for pure models, k4 for N4; four null cells k3/k4 x d20/d100. 28 cells, 24 alternatives x100 +4 nulls x500=4400 repetitions, B200, n300 per population, fit/test split0.5.",
+  "calibration": "True log density ratio vs base normal, 200000 per distribution fixed seed20261112; independent 100000 per distribution seed20261113. Bounds [0,0.995], stop and disclose if target unreachable. No threshold/model/target selection based on new power.",
+  "seeds": "Formal seed0=160000000 + cell_index*10000; 1<=rep<=500, disjoint from original smoke150M, legacy v1 <=120260021 and v2 >=200M. Additional smoke uses formal seed+2000 and B19; never pooled with formal rows.",
+  "methods": "Existing all12 components, fixed libraries L0-L7 and all currently implemented comparator groups including one-versus-rest maximum competitors in k4. No new dedicated learner.",
+  "confirmatory_boundary": "This is explicitly exploratory scenario development. Fresh formal Monte Carlo seeds reduce simulation noise but do not make post-hoc scenario choice an external confirmation. Keep all prior A-E, S1-S3 and current six-family cells, all adverse outcomes. No automatic library freeze, manuscript edits, or E1-E13 final-library runs."
+}

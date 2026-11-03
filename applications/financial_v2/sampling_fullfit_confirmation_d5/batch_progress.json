@@ -1,0 +1,23 @@
+{
+  "updated_utc": "2026-10-27T16:25:59.901992+00:00",
+  "stage": "COMPLETED_AWAITING_SCIENTIFIC_REVIEW",
+  "python_pid": 49256,
+  "R_launcher_pid": null,
+  "estimated_replications_completed": {
+    "null_iid": 1000,
+    "null_garch95": 1000,
+    "null_garch99": 1000,
+    "null_heterogeneous": 1000,
+    "null_garch95_t5": 1000,
+    "null_garch999": 1000,
+    "alt_sector_shape": 1000,
+    "alt_one_bank": 1000,
+    "null_equal_mixtures": 1000
+  },
+  "total_completed": 9000,
+  "total_planned": 9000,
+  "elapsed_minutes": 178.77,
+  "primary_stride": 4,
+  "scientific_status": "Not yet reviewed; numerical completion does not establish validity",
+  "real_pvalues_computed": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "Exploratory real-data analysis; stress-scenario calibration failed",
+  "target": "Five-day distributions of estimated standardized GARCH residuals",
+  "stocks": "Existing fixed 15-stock historical panel; no replacements",
+  "fit_period": "2015-2017",
+  "buffer": "20 trading days",
+  "test_period": "2018-01-30 through 2024-12-31",
+  "dimension": 5,
+  "B": 4999,
+  "primary_draw": 1,
+  "draws": [1,2,3,4,5,6,7,8,9,10],
+  "primary_stride": 4,
+  "sensitivity_strides": [1,2],
+  "methods": ["MCA-kDET","DISCO","MMD","MST"],
+  "seed": "((9000000 + (draw-1)*100 + kind)*65537 + 987654321) modulo 2^31; a namespace separate from simulated panels",
+  "comparison": "Identical held-out observations and permutation labels for all methods. Competitor coordinates use pooled fitting-only standardization; MMD uses permutation-invariant pooled-test median distance, as in the frozen competitor.",
+  "multiplicity": "Four hypotheses adjusted by Holm separately within each method, draw and stride; no joint 16-test error claim",
+  "selection": "Primary draw 1 and stride 4 retained regardless of p-values. All ten draws and all strides reported; no best-seed selection or p-value averaging.",
+  "interpretation": "Numerical threshold crossings are exploratory only. Failed calibration, filter estimation, remaining serial dependence and informative missingness prevent confirmed size/equivalence claims. Raw returns remain descriptive.",
+  "paper_edit": false
+}

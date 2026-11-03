@@ -1,0 +1,1 @@
+All six roots independently validated; moments match; skew mixture density and ring angular-integral density agree with independent formulas.

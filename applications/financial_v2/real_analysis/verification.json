@@ -1,0 +1,20 @@
+{
+  "real_data": true,
+  "status": "EXPLORATORY_UNVALIDATED_CALIBRATION",
+  "rows": 480,
+  "primary_rows": 16,
+  "draws": 10,
+  "gzip_crc_passed_files": 40,
+  "independent_method_audit_cells": 12,
+  "Holm_independently_verified": true,
+  "pure_Python_RDS_and_all_primary_permutation_statistics_verified": true,
+  "primary_draw": 1,
+  "primary_stride": 4,
+  "B": 4999,
+  "paper_modified": false,
+  "source_sha256": {
+    "real_analysis\\protocol.json": "5bb24c1d6c851cb10d64c8ee70b8dec7e58e4218f389df3f7f040999549eb13f",
+    "innovations\\filters.rds": "b134dec2f9848a12472024feffd1796acc539d44c7901b2a26593703cebc4fbd",
+    "design_two_tests\\main_panel.csv": "6eb27ed50de72c8adc30c3255bfe299a725b4a90e4241f4572a2c94fe815b33c"
+  }
+}

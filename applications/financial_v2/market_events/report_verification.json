@@ -1,0 +1,13 @@
+{
+  "status": "EXPLORATORY_EVENT_SCREEN_UNVALIDATED",
+  "event_modules": 15,
+  "method_results": 60,
+  "all_raw_pvalues_recomputed": true,
+  "source_fingerprints_match": true,
+  "all_phase_splits_verified": true,
+  "garch_recursion_independently_verified": true,
+  "max_variance_relative_error": 2.332145089147728e-15,
+  "extreme_historical_return_flags": 1,
+  "MCA_global_Holm_nominal_crossings": 1,
+  "no_confirmatory_or_causal_claim": true
+}

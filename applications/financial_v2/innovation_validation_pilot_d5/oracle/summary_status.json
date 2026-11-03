@@ -1,0 +1,17 @@
+{
+  "updated_utc": "2026-10-27T10:13:38.455598+00:00",
+  "completed_chunks": 60,
+  "rows": 7200,
+  "replications_by_scenario": {
+    "null_garch95": 100,
+    "null_garch95_t5": 100,
+    "null_garch99": 100,
+    "null_garch999": 100,
+    "null_heterogeneous": 100,
+    "null_iid": 100
+  },
+  "main_block_length": 8,
+  "main_null_cells_lower_ci_above_nominal": 0,
+  "max_learner_warnings": 0,
+  "max_nonconvergence_flags": 0
+}

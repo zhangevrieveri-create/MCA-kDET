@@ -1,0 +1,9 @@
+{
+  "added_labelings_independently_recomputed": 675000,
+  "all_pvalues_and_holm_match": true,
+  "all_source_hashes_unchanged": true,
+  "all_label_counts_correct": true,
+  "seed_replay_matches": true,
+  "maximum_statistic_error": 0.0,
+  "engine": "Pairwise comparison weights without rankdata; saved NPZ read back"
+}

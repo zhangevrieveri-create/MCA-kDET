@@ -1,0 +1,41 @@
+{
+ "amendment": 1,
+ "date": "2026-10-28",
+ "reason": "The placebo check of protocol.json failed for MCA-kDET: with the regime sequence shifted circularly, the week-label permutation p-value was <= 0.05 in 27.5% (innov) and 29.0% (dir) of 200 shifts, while the bootstrap null with independent weeks gave 4.5-6.5%. The linear learner alone was calibrated (1-4%); the quadratic learner and the forest were not. The diagnosis is slowly varying cross-industry dependence: week-label permutation treats weeks of different eras as exchangeable, and flexible learners separate eras. The original placebo result and the week-label p-values stay in the report.",
+ "timing": "Decided after the original placebo check and the week-label p-values of protocol.json had been seen, and before any statistic of this amendment was computed.",
+ "primary_inference": {
+  "name": "rotation (circular-shift) test",
+  "null": "the regime sequence is independent of the innovation process; the whole procedure (split, fitting, statistic) is run with the real sequence and with every circular shift of it by s = 52, ..., T-52 weeks, which keeps the persistence of the regimes and all dependence in the data",
+  "statistic": "observed T_max of MCA-kDET (largest standardized one-versus-rest AUC over regimes and learners); the same rule for the single learners and for the observed DISCO, MMD, MST and Schott statistics",
+  "p_value": "(1 + #{shifts s: T_s >= T_0}) / (1 + number of shifts)",
+  "hypotheses": [
+   "ind30 innov",
+   "ind30 dir"
+  ],
+  "multiplicity": "Holm over the two hypotheses for MCA-kDET",
+  "alpha": 0.05
+ },
+ "rotation": {
+  "min_shift": 52,
+  "B": 19,
+  "representations": [
+   "innov",
+   "dir"
+  ]
+ },
+ "secondary_inference": {
+  "name": "within-era permutation",
+  "rule": "test-week labels are permuted only within calendar windows of L consecutive weeks of the analysis period",
+  "calibration_check": "the 200 placebo labelings of protocol.json with B = 199; the version is called calibrated if the 95% Clopper-Pearson interval of its placebo rejection rate at 0.05 contains 0.05",
+  "reporting": "all three L and all data sets reported, with their placebo rates, whatever the result"
+ },
+ "strata": {
+  "lengths": [
+   26,
+   52,
+   104
+  ],
+  "primary": 52
+ },
+ "note_2026_10_29": "Added after the amendment-1 results, no rule changed: the circular shift joins the end of the sample to its start, so the rotation test is approximately, not exactly, valid under the null that the regime sequence is independent of the innovation process. Under the within-era permutation the null distributions of the four learners' T statistics are no longer standard normal and can differ in spread, so the maximum over learners can be dominated by the learner with the widest null; this explains ind49/dir (MCA p = 0.10 while knn p = 0.0046) and is reported as such."
+}

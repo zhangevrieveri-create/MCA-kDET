@@ -1,0 +1,18 @@
+{
+  "no_duplicate_stock_dates": true,
+  "number_features": 5,
+  "valid_rows": 6958,
+  "invalid_rows": 17,
+  "first_test_date": "2024-01-30",
+  "last_test_date": "2024-12-31",
+  "buffer_trading_days": 20,
+  "return_decomposition_verified": true,
+  "ohlc_order_verified": true,
+  "turnover_units": "RQData today original vendor units, not manually relabelled as a fraction",
+  "close_position_flat_day_rule": 0.5,
+  "source_hashes": {
+    "prices_post.csv.gz": "7c2f136b03f55dc4a65297c089df188f991b867fcdbb0d8d9450028d8bcd6606",
+    "suspended.csv.gz": "ac8d8a92f5c9d29e7f0f6b56943f59a0960b927192049d0f3657816111bd9e9c",
+    "turnover_today.csv.gz": "84798f8c69b09a47637b748b2664eb3d6b9924792c7c0c604f21033dee1c5442"
+  }
+}

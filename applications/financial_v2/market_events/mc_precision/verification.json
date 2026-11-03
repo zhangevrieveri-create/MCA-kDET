@@ -1,0 +1,100 @@
+{
+  "all_original_sources_unchanged": true,
+  "modules": 15,
+  "B": 49999,
+  "added_permutations": 675000,
+  "original_statistics_checked": 75000,
+  "audits": [
+    {
+      "job": 1,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 2,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 3,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 4,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 5,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 6,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 7,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 8,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 9,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 10,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 11,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 12,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 13,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 14,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    },
+    {
+      "job": 15,
+      "original_statistic_error": 0.0,
+      "direct_pairwise_added_error": 0.0,
+      "all_label_counts_preserved": true
+    }
+  ],
+  "interval_scope": "95% pointwise binomial interval for conditional permutation exceedance probability only; not a simultaneous interval, not a CI for an economic parameter."
+}

@@ -1,0 +1,12 @@
+# 数据与大结果不入库
+**/raw/
+**/prepared/
+**/results*/
+**/outputs/
+__pycache__/
+*.rds
+*.RData
+*.aux
+*.log
+*.pdf
+*.xlsx

@@ -1,0 +1,11 @@
+{
+  "scope": "mechanical smoke checks only, synthetic scores/features",
+  "auc_matches_direct_pair_comparison": true,
+  "constant_scores_p_equals_one": true,
+  "bootstrap_preserves_full_calendar_and_synchronous_stock_axis": true,
+  "centered_embedding_errors_match_explicit_feature_means": true,
+  "zero_feature_difference_handled_without_naive_squared_MMD_bootstrap": true,
+  "real_panel_analyzed": false,
+  "empirical_size_or_power_estimated": false,
+  "theoretical_validity_proved": false
+}

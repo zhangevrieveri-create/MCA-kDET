@@ -1,0 +1,121 @@
+{
+ "title": "Chapter 5 financial application v3: contagion or interdependence across ex-ante VIX regimes",
+ "frozen_on": "2026-10-28, before any test statistic on these data was computed",
+ "question": "After each industry's own GARCH(1,1) volatility is removed, is the joint distribution of weekly US industry returns the same in low-, medium- and high-VIX weeks?",
+ "raw_dirs": [
+  "raw",
+  "../financial_v2/market_events/raw",
+  "../financial/raw"
+ ],
+ "vix_file": "VIX_History.csv",
+ "datasets": {
+  "ind30": {
+   "file": "30_Industry_Portfolios_Daily_CSV.zip",
+   "role": "main"
+  },
+  "ind10": {
+   "file": "10_Industry_Portfolios_Daily_CSV.zip",
+   "role": "robustness"
+  },
+  "ind49": {
+   "file": "49_Industry_Portfolios_daily_CSV.zip",
+   "role": "robustness"
+  }
+ },
+ "returns": "value-weighted daily returns (%), Friday weeks, 100 x sum of daily log(1 + r/100); trailing incomplete week dropped",
+ "presample_period": [
+  "1990-01-01",
+  "1999-12-31"
+ ],
+ "analysis_period": [
+  "2000-01-01",
+  "2026-09-30"
+ ],
+ "regime": "lagged VIX: Cboe close on the last trading day of the previous Friday week; terciles of weekly VIX in the presample period; 1 = low, 2 = medium, 3 = high",
+ "vix_threshold_period": [
+  "1990-01-01",
+  "1999-12-31"
+ ],
+ "vix_alt_thresholds": [
+  15,
+  25
+ ],
+ "representations": {
+  "raw": "weekly log returns; benchmark, rejection expected because volatility differs by construction",
+  "innov": "GARCH(1,1) Gaussian QML innovations, one filter per industry fitted to the analysis period without labels (as in simulation E8)",
+  "dir": "innov / ||innov||, the direction of each week's innovation vector; invariant to any scale common to all industries in a week",
+  "innov_pre": "GARCH parameters fitted on the presample only, recursion forward (robustness)",
+  "dir_pre": "direction of innov_pre (robustness)"
+ },
+ "split": {
+  "type": "blocks",
+  "block": 26,
+  "buffer": 4,
+  "fit_fraction": 0.5,
+  "seed": 20261028,
+  "min_per_group": 30
+ },
+ "learners": [
+  "l1",
+  "quad",
+  "knn",
+  "rf"
+ ],
+ "competitors": [
+  "DISCO",
+  "MMD",
+  "MST",
+  "Schott"
+ ],
+ "permutations": 4999,
+ "primary": {
+  "dataset": "ind30",
+  "hypotheses": [
+   "innov",
+   "dir"
+  ],
+  "method": "MCA",
+  "multiplicity": "Holm over the two primary hypotheses",
+  "alpha": 0.05,
+  "benchmark": "raw (reported, not part of the Holm family)"
+ },
+ "secondary": [
+  {
+   "dataset": "ind10",
+   "representations": [
+    "raw",
+    "innov",
+    "dir"
+   ]
+  },
+  {
+   "dataset": "ind49",
+   "representations": [
+    "raw",
+    "innov",
+    "dir"
+   ]
+  },
+  {
+   "dataset": "ind30",
+   "representations": [
+    "innov_pre",
+    "dir_pre"
+   ]
+  },
+  {
+   "dataset": "ind30",
+   "representations": [
+    "innov",
+    "dir"
+   ],
+   "regime": "regime_alt"
+  }
+ ],
+ "calibration_checks": {
+  "placebo": "ind30, innov and dir: the regime sequence is shifted circularly by 200 distinct offsets drawn uniformly from 52..(T-52) weeks (seed 20261029); the data and the block split are those of the main analysis; B = 199",
+  "bootstrap_null": "ind30: 200 data sets; innovation vectors are resampled with replacement from the main innovations (rows kept intact), returns are generated with the fitted GARCH(1,1) of each industry (burn-in 200 weeks), the filters are re-estimated, and innov and dir are tested with the real regime sequence and split; B = 199; seed (20261030, r) for data set r",
+  "criterion": "rejection rate at 0.05 with its 95% Clopper-Pearson interval; reported in full whatever its value"
+ },
+ "reporting": "all p-values of all methods and settings are reported; one-versus-rest T statistics by regime and learner are reported for interpretation (Remark 7); economic descriptives by regime: mean pairwise correlation of innovations, absorption ratio (top d/5 eigenvalues of the correlation matrix), lower-tail co-exceedance at the 5% level, innovation variance, risk of the low-regime minimum-variance portfolio in other regimes"
+}

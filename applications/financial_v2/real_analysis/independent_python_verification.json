@@ -1,0 +1,11 @@
+{
+  "engine": "Pure Python rdata parser, SciPy ranks/distances/MST, NumPy statistics; no R runtime",
+  "saved_job_files": 40,
+  "all_480_pvalues_recomputed": true,
+  "primary_cells": 12,
+  "labelings_per_cell": 5000,
+  "all_four_methods_recomputed_on_all_saved_primary_labelings": true,
+  "max_statistic_error": 5.684341886080801e-13,
+  "all_primary_pvalues_identical": true,
+  "R_audit_runtime_note": "R-based rereads intermittently emitted decompression and locked-binding errors. Original RDS CRCs passed; pure Python independent verification resolves reliance on that audit runtime."
+}

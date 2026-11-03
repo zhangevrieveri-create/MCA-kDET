@@ -1,0 +1,96 @@
+{
+  "source_hashes_match": true,
+  "frozen_sources_unchanged": true,
+  "independent_reference_pvalues": 24,
+  "independent_statistic_labelings": 6000,
+  "feature_matrices_rebuilt_from_daily_values": true,
+  "all_fit_only_scales_verified": true,
+  "ablation_uses_identical_permutation_labels": true,
+  "no_claim_of_real_data_calibration": true,
+  "checks": [
+    {
+      "sector": "银行",
+      "representation": "full5",
+      "all_1000_labelings_recomputed": true,
+      "max_statistic_errors": {
+        "MCA-kDET": 0.0,
+        "DISCO": 2.2737367544323206e-12,
+        "MMD": 3.9985376121265404e-16,
+        "MST": 0.0
+      },
+      "scipy_MST_tie_difference": 0.0,
+      "MST_engine": "SciPy sparse MST",
+      "warnings": []
+    },
+    {
+      "sector": "银行",
+      "representation": "price4",
+      "all_1000_labelings_recomputed": true,
+      "max_statistic_errors": {
+        "MCA-kDET": 0.0,
+        "DISCO": 1.8189894035458565e-12,
+        "MMD": 3.9985376121265404e-16,
+        "MST": 0.0
+      },
+      "scipy_MST_tie_difference": 1.0,
+      "MST_engine": "Literal Prim tie policy matching frozen R",
+      "warnings": []
+    },
+    {
+      "sector": "医药",
+      "representation": "full5",
+      "all_1000_labelings_recomputed": true,
+      "max_statistic_errors": {
+        "MCA-kDET": 0.0,
+        "DISCO": 3.637978807091713e-12,
+        "MMD": 3.997453409954055e-16,
+        "MST": 0.0
+      },
+      "scipy_MST_tie_difference": 0.0,
+      "MST_engine": "SciPy sparse MST",
+      "warnings": []
+    },
+    {
+      "sector": "医药",
+      "representation": "price4",
+      "all_1000_labelings_recomputed": true,
+      "max_statistic_errors": {
+        "MCA-kDET": 0.0,
+        "DISCO": 2.2737367544323206e-12,
+        "MMD": 3.3306690738754696e-16,
+        "MST": 0.0
+      },
+      "scipy_MST_tie_difference": 1.0,
+      "MST_engine": "Literal Prim tie policy matching frozen R",
+      "warnings": []
+    },
+    {
+      "sector": "机械",
+      "representation": "full5",
+      "all_1000_labelings_recomputed": true,
+      "max_statistic_errors": {
+        "MCA-kDET": 0.0,
+        "DISCO": 2.2737367544323206e-12,
+        "MMD": 4.2197148553135833e-16,
+        "MST": 0.0
+      },
+      "scipy_MST_tie_difference": 0.0,
+      "MST_engine": "SciPy sparse MST",
+      "warnings": []
+    },
+    {
+      "sector": "机械",
+      "representation": "price4",
+      "all_1000_labelings_recomputed": true,
+      "max_statistic_errors": {
+        "MCA-kDET": 0.0,
+        "DISCO": 2.2737367544323206e-12,
+        "MMD": 4.440892098500626e-16,
+        "MST": 0.0
+      },
+      "scipy_MST_tie_difference": 0.0,
+      "MST_engine": "SciPy sparse MST",
+      "warnings": []
+    }
+  ]
+}

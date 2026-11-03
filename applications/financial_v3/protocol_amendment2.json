@@ -1,0 +1,21 @@
+{
+ "amendment": 2,
+ "date": "2026-10-30",
+ "reason": "Amendment 1 made a restricted circular-shift (rotation) test the primary inference. That procedure has no proved level: the shift set {52, ..., T-52} is not a group and the circular join is ad hoc. The truncated time-shift (TTS) test of Yuan and Shou (2024, PLoS Biology 22(8), e3002758) has a proved level under the null that the two series are independent, provided that the series that is shifted is strictly stationary. Here the shifted series is the VIX regime sequence.",
+ "timing": "Decided after the rotation and within-era results of amendment 1 had been seen, and before any statistic of this amendment was computed. The rotation and within-era results stay in the report unchanged.",
+ "primary_inference": {
+  "name": "truncated time-shift (TTS) test",
+  "truncation_radius": "r = floor(0.2 * T) = 279 weeks, the share used in the examples of Yuan and Shou (2024); fixed before any statistic was computed",
+  "procedure": "the returns are kept on the weeks r+1, ..., T-r (1-based); for every shift delta = -r, ..., r the week t of this window receives the regime of week t + delta; weeks outside the window are not used. The split (weeks.csv, role) and the seed are the same for all shifts, so the statistic is the same function of the aligned pair for every delta",
+  "p_value": "u = B / (r + 1), where B = #{delta in -r..r : T_delta >= T_0} counts delta = 0 itself; p = min(u, 1). P(u <= alpha) <= alpha under the null",
+  "statistic": "observed T_max of MCA-kDET; the same rule for the single learners and for the observed DISCO, MMD, MST and Schott statistics",
+  "hypotheses": ["ind30 innov", "ind30 dir"],
+  "multiplicity": "Holm over the two hypotheses for MCA-kDET",
+  "alpha": 0.05
+ },
+ "sensitivity": {
+  "lag2": "regime of week t defined by the VIX at the close of week t-2 (the regime sequence of protocol.json shifted by one week; the first week is dropped). Run with the TTS test (same r, same seed rule) and with the within-era permutation, L = 52, B = 4999",
+  "not_used": "dropping the last weeks of each high-VIX spell was considered and rejected: whether a week ends a spell depends on that week's own return, so the rule selects weeks on their returns and would create a difference between regimes under the null"
+ },
+ "reporting": "all results are reported whatever they are, next to the rotation and within-era results of amendment 1"
+}

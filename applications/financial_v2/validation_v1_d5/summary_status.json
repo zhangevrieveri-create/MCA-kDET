@@ -1,0 +1,21 @@
+{
+  "updated_utc": "2026-10-27T08:50:00.406782+00:00",
+  "completed_chunks": 100,
+  "rows": 12000,
+  "replications_by_scenario": {
+    "alt_one_bank": 100,
+    "alt_sector_dependence": 100,
+    "alt_sector_mean": 100,
+    "alt_sector_scale": 100,
+    "null_ar50": 100,
+    "null_ar90": 100,
+    "null_garch95": 100,
+    "null_garch99": 100,
+    "null_iid": 100,
+    "null_t5_ar": 100
+  },
+  "main_block_length": 8,
+  "main_null_cells_lower_ci_above_nominal": 5,
+  "max_learner_warnings": 0,
+  "max_nonconvergence_flags": 4
+}

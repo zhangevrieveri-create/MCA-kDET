@@ -1,0 +1,35 @@
+{
+  "updated_utc": "2026-10-27T13:41:42.030410+00:00",
+  "B": 39,
+  "status": "development pilot; not confirmed calibration",
+  "per_scenario": [
+    {
+      "scenario": "null_iid",
+      "outer_planned": 20,
+      "outer_started": 20,
+      "outer_complete": 20,
+      "inner_complete": 780,
+      "inner_planned": 780
+    },
+    {
+      "scenario": "null_garch99",
+      "outer_planned": 20,
+      "outer_started": 20,
+      "outer_complete": 20,
+      "inner_complete": 780,
+      "inner_planned": 780
+    },
+    {
+      "scenario": "null_heterogeneous",
+      "outer_planned": 20,
+      "outer_started": 20,
+      "outer_complete": 20,
+      "inner_complete": 780,
+      "inner_planned": 780
+    }
+  ],
+  "real_pvalues_computed": false,
+  "pvalue_resolution": 0.025,
+  "holm_global_null_has_sufficient_resolution": false,
+  "restricted_common_stock_null_not_general_mixture_null": true
+}

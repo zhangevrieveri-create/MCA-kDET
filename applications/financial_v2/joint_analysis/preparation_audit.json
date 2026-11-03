@@ -1,0 +1,56 @@
+{
+  "representation": "sorted weekly cross-stock residual scores",
+  "scope": "exploratory",
+  "checks": [
+    {
+      "split": "fit",
+      "sector": 1,
+      "calendar_blocks": 146,
+      "common_complete_blocks": 116,
+      "max_sum_preservation_error": 1.7763568394002505e-15
+    },
+    {
+      "split": "fit",
+      "sector": 2,
+      "calendar_blocks": 146,
+      "common_complete_blocks": 116,
+      "max_sum_preservation_error": 1.7763568394002505e-15
+    },
+    {
+      "split": "fit",
+      "sector": 3,
+      "calendar_blocks": 146,
+      "common_complete_blocks": 116,
+      "max_sum_preservation_error": 1.7763568394002505e-15
+    },
+    {
+      "split": "test",
+      "sector": 1,
+      "calendar_blocks": 335,
+      "common_complete_blocks": 311,
+      "max_sum_preservation_error": 1.7763568394002505e-15
+    },
+    {
+      "split": "test",
+      "sector": 2,
+      "calendar_blocks": 335,
+      "common_complete_blocks": 311,
+      "max_sum_preservation_error": 1.7763568394002505e-15
+    },
+    {
+      "split": "test",
+      "sector": 3,
+      "calendar_blocks": 335,
+      "common_complete_blocks": 311,
+      "max_sum_preservation_error": 3.552713678800501e-15
+    }
+  ],
+  "primary_fixed_before_new_pvalues": true,
+  "schedules_reused_without_outcome_selection": true,
+  "source_sha256": {
+    "innovations\\innovation_vectors.csv.gz": "0bbde2e289bb297d07b4f9b980092bba734e6ec4293a7f9184597f6ceb3e21a1",
+    "design_two_tests\\block_calendar.csv": "cc860f4ba87183f7adc5e2c44cd22a305d26362da1211289c9ce476155d40548",
+    "design_two_tests\\main_panel.csv": "6eb27ed50de72c8adc30c3255bfe299a725b4a90e4241f4572a2c94fe815b33c",
+    "joint_analysis\\protocol.json": "4589f2fefbe0cdc003fb6879fb183b4f55f18f099e626cb1842e692a90666857"
+  }
+}

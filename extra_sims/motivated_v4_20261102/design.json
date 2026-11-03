@@ -1,0 +1,15 @@
+{
+  "status": "exploratory design fixed before new power results; not manuscript claims",
+  "date": "2026-11-02",
+  "scientific_question": "Can the existing classifier maximum detect learnable nonlinear differences with matched population means and covariances, including heterogeneous departures across populations?",
+  "families": ["N1_bimodal", "N2_scale_mix", "N3_condvar", "N4_mixed"],
+  "moments": "Every population has zero mean, identity covariance, and all polynomial moments finite.",
+  "main": {"n_per_group": 300, "d": 20, "k_pure": 3, "k_mixed": 4, "base_reference_oracle_auc": [0.60, 0.70, 0.80]},
+  "difficulty_check": {"n_per_group": 300, "d": 100, "base_reference_oracle_auc": [0.70]},
+  "calibration": {"method": "True log density ratio against N(0,I), fixed common random numbers; mixed scenario calibrates each departure separately against the same base, not the changing mixture.", "points_per_distribution": 200000, "seed": 20261102, "theta_bounds": [0, 0.995]},
+  "statistics": "Existing frozen AUC/maximum/permutation code; all original 12 candidate components and fixed L0-L7 sets; no new learner added.",
+  "comparators": "maxmean, clx_mean, clx_cov, one-versus-rest maximum versions for mixed scenario; DISCO, MMD, MST, Schott and permutation Schott, mmd_max, KMD, Song-Chen S and SA",
+  "pilot_plan": {"B": 200, "alternative_reps": 100, "null_reps": 500, "first_smoke": "3 replications per cell, B=19; all settings retained regardless of outcome"},
+  "learning_diagnostics": "Save AUC for each learner and each population, not only population k; save xscr selected feature IDs and direction-specific observed AUCs in diagnostic reruns.",
+  "selection_policy": "Do not alter models, strengths, dimensions or remove losing cells after inspecting new power. Keep old A-E and S1-S3 results. No guarantee MCA is best; all comparator outcomes retained."
+}

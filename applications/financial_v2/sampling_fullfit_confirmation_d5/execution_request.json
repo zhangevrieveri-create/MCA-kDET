@@ -1,0 +1,20 @@
+{
+  "command": [
+    "D:\\R-4.6.1\\bin\\Rscript.exe",
+    "--vanilla",
+    "E:/多分布test/sim/applications/financial_v2/run_sampling_confirmation.R",
+    "--reps=1000",
+    "--first=101",
+    "--B=999",
+    "--cores=30",
+    "--scenarios=null_iid,null_garch95,null_garch99,null_heterogeneous,null_garch95_t5,null_garch999,alt_sector_shape,alt_one_bank,null_equal_mixtures",
+    "--out=E:/多分布test/sim/applications/financial_v2/sampling_fullfit_confirmation_d5"
+  ],
+  "primary_stride": 4,
+  "first_rep": 101,
+  "last_rep": 1100,
+  "replications_per_case": 1000,
+  "B": 999,
+  "cores": 30,
+  "source": "Independent confirmation uses new simulated panels; real p-values not computed"
+}

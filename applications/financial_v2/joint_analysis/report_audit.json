@@ -1,0 +1,17 @@
+{
+  "status": "EXPLORATORY_NEW_JOINT_TARGET",
+  "new_between_method_results": 120,
+  "retained_within_method_results": 360,
+  "original_within_pvalues_unchanged": true,
+  "Holm_recomputed_for_new_four_hypothesis_family": true,
+  "primary_draw": 1,
+  "primary_stride": 4,
+  "B": 4999,
+  "source_sha256": {
+    "real_analysis\\results.csv": "191e4e91595ce711764497d62a25a84b9015f06b89d0a0f8ad9be7e17b46c4df",
+    "joint_analysis\\between_results.csv": "37d718c7296b558e0afef00956e525ab61f820be034d35cfd261c94a58ff887d",
+    "joint_analysis\\protocol.json": "4589f2fefbe0cdc003fb6879fb183b4f55f18f099e626cb1842e692a90666857",
+    "joint_analysis\\sorted_sector_vectors.csv": "596e4be148297c51436c9c77fe1786c619582cc37db4bdf5bb548bfbcd15d1a0",
+    "joint_analysis\\fixed_schedules.csv": "803bc7129974421171c07c6ef4ad086e24b93dcf63e5486ad989201d0d79dba2"
+  }
+}

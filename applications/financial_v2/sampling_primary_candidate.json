@@ -1,0 +1,27 @@
+{
+  "target": "GARCH-adjusted five-day innovation distributions",
+  "status": "candidate frozen before independent confirmation; NOT validated",
+  "primary_stride": 4,
+  "stride_unit": "nonoverlapping five-trading-day calendar blocks",
+  "full_training_panel": true,
+  "approximate_test_n": {
+    "within_each_stock": 15,
+    "between_each_sector": 25
+  },
+  "choice_basis": "Null pilots showed residual inflation at shorter spacing. Spacing four remains only a candidate; one iid pilot cell rejected 11/100, so independent confirmation is essential.",
+  "pilot_reps_per_case": 100,
+  "confirmation_reps_per_case": 1000,
+  "confirmation_rep_ids": [
+    101,
+    1100
+  ],
+  "permutations_B": 999,
+  "real_pvalues_computed": false,
+  "frozen_utc": "2026-10-27T13:26:39.734451+00:00",
+  "source_sha256": {
+    "sampling_calibration.R": "d4172926853ea7564f5add1f510f790a20a14c020dbadabcade1d707bca3d8fc",
+    "sampling_calibration_fullfit.R": "76a55f465ae69a6c44623a4ddbe20d01205334fcf9916dddad7bc3c019a3e668",
+    "sampling_calibration_confirmation.R": "6854f53b4820c523c897ed66abba23bc432f6d4fcd13bd3c49d25742f35055fa",
+    "run_sampling_confirmation.R": "37d2292518f2042409ff0dd745fc0bdfe2ad9759873cb1b0ebb79792545a723e"
+  }
+}

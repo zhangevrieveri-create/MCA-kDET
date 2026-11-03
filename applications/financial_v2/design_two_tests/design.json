@@ -1,0 +1,104 @@
+{
+  "version": "two_tests_design_v1",
+  "no_classifiers_fitted": true,
+  "no_tests_computed": true,
+  "sectors": [
+    "银行",
+    "医药",
+    "机械"
+  ],
+  "stocks_per_sector": 5,
+  "selection_date": "2017-12-29",
+  "industry_source": "citics_2019, historical-date query; retrospective taxonomy",
+  "selection_rule": "Top10 by pre-test CSI300 weight, baseline 2015-2017 coverage>=.98, positive volume>=.95, listed before 2015; first5 eligible each sector. No outcome/survival filter.",
+  "fit_period": [
+    "2015-01-01",
+    "2017-12-31"
+  ],
+  "test_planned": [
+    "2018-01-01",
+    "2024-12-31"
+  ],
+  "gap_trading_days": 20,
+  "gap_dates": [
+    "2018-01-02",
+    "2018-01-29"
+  ],
+  "test_first_trading_day": "2018-01-30",
+  "primary_dimension": 5,
+  "sensitivity_dimension": 20,
+  "analysis_plan": {
+    "status": "design specification; dependence calibration unvalidated; no real test results",
+    "main_questions": [
+      "three within-sector equality tests, five stock populations each",
+      "one between-sector equality test, three equal-weight five-stock mixtures"
+    ],
+    "library": [
+      "l1",
+      "quad",
+      "knn",
+      "rf"
+    ],
+    "alpha": 0.05,
+    "primary_pvalue_adjustment": "Holm across the four main MCA tests",
+    "bootstrap_repetitions": 4999,
+    "main_bootstrap_trading_day_span": 40,
+    "bootstrap_span_sensitivity": [
+      20,
+      60
+    ],
+    "bootstrap_feature_blocks": {
+      "d5": [
+        4,
+        8,
+        12
+      ],
+      "d20": [
+        1,
+        2,
+        3
+      ]
+    },
+    "bootstrap_mask_handling": "Resample full-calendar panel and common-validity marker together; compute AUC on selected complete rows, keep original calendar gaps; fixed observed AUC scales.",
+    "mca_centering": "(AUC_boot_component - AUC_observed_component)/fixed_observed_scale, then maximum across populations and learners",
+    "distance": "Gaussian-kernel MMD, unsquared, with one pooled fitting-only scale and one fitting-only median bandwidth for all stock/sector pairs",
+    "contrast": "Equally average 75 cross-sector stock-pair distances minus equally average 30 within-sector stock-pair distances; same five stocks/sector.",
+    "distance_uncertainty": "Synchronously bootstrap centered RKHS mean-difference errors; common 95% radius across 105 stock pairs and three sector-mixture pairs; derive simultaneous distance bounds and conservative contrast interval.",
+    "different_inference_families": "Four MCA tests have Holm familywise .05; the distance family has simultaneous .95 coverage. Do not claim .95 coverage for the union of both families.",
+    "null_validation_replications": 1000,
+    "null_validation_bootstrap_repetitions": 999,
+    "validation_levels": [
+      0.01,
+      0.05,
+      0.1
+    ],
+    "pilot_rule": "First smoke/100-rep numerical pilot, then 1000-rep validation. Freeze changes from null simulations, never from real test p values.",
+    "null_scenarios": [
+      "same-marginal Gaussian panels with asymmetric cross-stock correlation",
+      "same-marginal autoregressive panels",
+      "same-marginal GARCH persistence .95 and .99",
+      "same-marginal heavy-tailed panels"
+    ],
+    "stress_scenarios": [
+      "actual fixed calendar missingness mask",
+      "common volatility breaks (outside stationary baseline assumptions)"
+    ],
+    "positive_controls": [
+      "within-sector equality plus between-sector mean/scale/dependence shifts",
+      "one genuinely deviating stock within a sector"
+    ],
+    "equivalence_claim": "Not included without an author-defined substantive discrepancy tolerance",
+    "comparators": "Do not transfer this AUC calibration mechanically to degenerate DISCO/MMD null statistics or MST graphs; their inferential calibrations require separate validation."
+  },
+  "missingness_policy": "Keep original block indices and joint validity mask. No compression of gaps, no synthetic filling, no changing selected stocks from post-2017 missingness.",
+  "inference_status": "Calendar missingness and dependence calibration require validation before main inference. Equal mixtures refer to the selected fixed panel, not all sector stocks.",
+  "sha256": {
+    "hs300_weights_20171229.csv": "99bee0ba0ec8ae544886de2b9a7497c2fde227129bef096f683d0c19f3901277",
+    "hs300_industry_20171229.csv": "4e6ef01fd908a8faba18e08efb8f43839db7e546d987a78cfb8aefaf2603ef5b",
+    "candidate_instruments_2017panel.csv": "680828d98629474f7181b33b97f3f8125468f3f680998922951c8c8ebb8cf29a",
+    "candidate_baseline_2015_2017.csv.gz": "3df62f766fba112cf80f86714361624e2a41421670c6424547a77cb3afababe2",
+    "two_tests_daily_2015_2024.csv.gz": "4ed76666974b7de5ede487fddfcda369245699537c21cf0696252a9c3e1713d6",
+    "two_tests_suspended_2015_2024.csv.gz": "141752fdb6c687a8ff9f994bbd59696bbe8bf226f3aa8c4c9aeeeac5862fee4a",
+    "design_two_tests.py": "76c00be74e610f3e018623907a3d8c9e165357215681721272bea08e5f98750c"
+  }
+}

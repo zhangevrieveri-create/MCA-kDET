@@ -1,0 +1,8 @@
+{
+  "selection_and_source_hashes_verified": true,
+  "three_sectors_five_stocks_each": true,
+  "nonoverlapping_vector_axes_and_original_calendar_verified": true,
+  "selected_vectors_match_saved_daily_returns": true,
+  "fitting_buffer_testing_separated": true,
+  "real_inference_run": false
+}

@@ -1,0 +1,160 @@
+{
+  "version": "KP_stage_execution_v1",
+  "primary_seed": 20261027,
+  "alpha": 0.05,
+  "specifications": [
+    {
+      "seed": 20261027,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "primary",
+      "name": "primary"
+    },
+    {
+      "seed": 20261027,
+      "cells": 30,
+      "dimension": 50,
+      "cohort": "all",
+      "role": "sensitivity",
+      "name": "genes_50"
+    },
+    {
+      "seed": 20261027,
+      "cells": 30,
+      "dimension": 200,
+      "cohort": "all",
+      "role": "sensitivity",
+      "name": "genes_200"
+    },
+    {
+      "seed": 20261027,
+      "cells": 20,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "sensitivity",
+      "name": "cells_20"
+    },
+    {
+      "seed": 20261027,
+      "cells": 40,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "sensitivity",
+      "name": "cells_40"
+    },
+    {
+      "seed": 20261027,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "middle_20w_only",
+      "role": "sensitivity",
+      "name": "middle_20w_only"
+    },
+    {
+      "seed": 20261027,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "single_tumor",
+      "role": "sensitivity",
+      "name": "one_tumor"
+    },
+    {
+      "seed": 20261028,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_01"
+    },
+    {
+      "seed": 20261029,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_02"
+    },
+    {
+      "seed": 20261030,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_03"
+    },
+    {
+      "seed": 20261031,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_04"
+    },
+    {
+      "seed": 20261032,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_05"
+    },
+    {
+      "seed": 20261033,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_06"
+    },
+    {
+      "seed": 20261034,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_07"
+    },
+    {
+      "seed": 20261035,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_08"
+    },
+    {
+      "seed": 20261036,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_09"
+    },
+    {
+      "seed": 20261037,
+      "cells": 30,
+      "dimension": 100,
+      "cohort": "all",
+      "role": "split_stability",
+      "name": "split_10"
+    }
+  ],
+  "main_methods": [
+    "MCA",
+    "DISCO",
+    "MMD",
+    "MST"
+  ],
+  "library": [
+    "l1",
+    "quad",
+    "knn",
+    "rf"
+  ],
+  "calibration": "Complete enumeration of whole-test-animal labels with fixed animal group counts; observational block exchangeability assumed.",
+  "inference_scope": "Joint distributions of sampled animal cell blocks, not iid-cell marginal-distribution theorem.",
+  "sensitivity_policy": "Report every prespecified configuration and split; no min-p selection or power claim.",
+  "one_tumor_rule": "For each 30-week mouse choose one tumor uniformly before cell sampling using seed+179.",
+  "middle_20w_rule": "Omit 18-week mice; middle group 1 fitting and 2 testing mice, all other stage counts unchanged."
+}
